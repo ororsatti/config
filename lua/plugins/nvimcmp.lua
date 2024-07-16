@@ -1,3 +1,15 @@
+local function border(hl_name)
+  return {
+    { '╭', hl_name },
+    { '─', hl_name },
+    { '╮', hl_name },
+    { '│', hl_name },
+    { '╯', hl_name },
+    { '─', hl_name },
+    { '╰', hl_name },
+    { '│', hl_name },
+  }
+end
 return { -- Autocompletion
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
@@ -38,6 +50,17 @@ return { -- Autocompletion
     luasnip.config.setup {}
 
     cmp.setup {
+      window = {
+        completion = cmp.config.window.bordered {
+          border = border 'CmpBorder',
+          winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None',
+        },
+        documentation = cmp.config.window.bordered {
+          documentation = {
+            border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+          },
+        },
+      },
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
