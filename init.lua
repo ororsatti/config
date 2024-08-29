@@ -127,6 +127,8 @@ require('lazy').setup({
 
       local servers = {
         clangd = {},
+        arduino_language_server = {},
+        tailwindcss = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},

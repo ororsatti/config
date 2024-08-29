@@ -8,7 +8,7 @@ return {
     config = function()
       local harpoon = require 'harpoon'
       vim.keymap.set('n', '<leader>a', function()
-        harpoon:list():append()
+        harpoon:list():add()
       end, { desc = "Add current file to harpoon's list" })
 
       vim.keymap.set('n', shared.harpoon_notation 'E', function()

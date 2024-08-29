@@ -49,4 +49,6 @@ M.map = function(arr, f)
   return t
 end
 
+M.optional_group = vim.api.nvim_create_augroup('optional', { clear = true })
+
 return M
