@@ -1,14 +1,6 @@
 local U = require 'utils'
 return { -- Highlight, edit, and navigate code
   {
-    'nvim-treesitter/nvim-treesitter-context',
-    config = function()
-      vim.keymap.set('n', '<leader>cg', function()
-        require('treesitter-context').go_to_context(vim.v.count1)
-      end, { silent = true, desc = 'Go to current context' })
-    end,
-  },
-  {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {

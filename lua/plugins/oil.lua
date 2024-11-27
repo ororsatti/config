@@ -11,6 +11,7 @@ return {
       use_default_keymaps = true,
       keymaps = {
         ['<C-t>'] = false,
+        ['-'] = 'actions.parent',
       },
       view_options = {
         show_hidden = true,

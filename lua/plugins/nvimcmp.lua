@@ -119,5 +119,6 @@ return { -- Autocompletion
         { name = 'path' },
       },
     }
+    vim.cmd 'highlight FloatBorder guibg=NONE'
   end,
 }
