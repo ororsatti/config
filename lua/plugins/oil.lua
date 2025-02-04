@@ -11,6 +11,8 @@ return {
       use_default_keymaps = true,
       keymaps = {
         ['<C-t>'] = false,
+        ['<C-g>'] = false,
+        ['C-b'] = { 'actions.select', opts = { vertical = true } },
         ['-'] = 'actions.parent',
       },
       view_options = {

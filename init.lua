@@ -126,7 +126,12 @@ require('lazy').setup({
       local nvim_lsp = require 'lspconfig'
 
       local servers = {
-        clangd = {},
+        clangd = {
+          cmd = {
+            'clangd',
+            '--fallback-style=webkit',
+          },
+        },
         arduino_language_server = {},
         tailwindcss = {},
         -- gopls = {},
